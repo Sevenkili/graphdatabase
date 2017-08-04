@@ -15,8 +15,8 @@
 ## 一.什么是图数据库
   - 关键词：存储图结构数据，NoSQL<br>
   - Neo4j的基本要素(构造单元)：结点，关系，属性<br>
-![image](https://github.com/Sevenkili/raphdatabase/raw/master/image/1.png)<br>
-![image](https://github.com/Sevenkili/raphdatabase/raw/master/image/2.png)<br>
+![image](https://github.com/Sevenkili/graphdatabase/raw/master/image/1.png)<br>
+![image](https://github.com/Sevenkili/graphdatabase/raw/master/image/2.png)<br>
 
 
 ## 二.为什么使用图数据库
@@ -24,15 +24,15 @@
 举例说明：<br>
 RDBMS-MySQL VS. Graph DB-Neo4j<br>
 在关系型数据库中的社交网络关系数据存储<br>
-![image](https://github.com/Sevenkili/raphdatabase/raw/master/image/3.png)<br>
-![image](https://github.com/Sevenkili/raphdatabase/raw/master/image/4.png)<br>
+![image](https://github.com/Sevenkili/graphdatabase/raw/master/image/3.png)<br>
+![image](https://github.com/Sevenkili/graphdatabase/raw/master/image/4.png)<br>
 
 查询某个用户的朋友的朋友：使用一次inner join操作
 比如查询2的朋友的朋友：<br>
 ```
 select * from t_user_friend uf1 inner join t_user_friend uf2 on uf1.user_1 = uf2.user_2 where uf1.user_2 = 2;
 ```
-![image](https://github.com/Sevenkili/raphdatabase/raw/master/image/5.png)<br>
+![image](https://github.com/Sevenkili/graphdatabase/raw/master/image/5.png)<br>
 一般要做去重操作。可以得知2的朋友1的朋友是4。<br>
 如果要查询某个用户的朋友的朋友的朋友，即3度关系<br>
 ```
@@ -40,7 +40,7 @@ select distinct * from t_user_friend uf1 inner join t_user_friend uf2 on uf1.use
 inner join t_user_friend uf3 on uf2.user_1 = uf3.user_2  
 where uf1.user_2 = 2;
 ```
-![image](https://github.com/Sevenkili/raphdatabase/raw/master/image/6.png)<br>
+![image](https://github.com/Sevenkili/graphdatabase/raw/master/image/6.png)<br>
 也就是说，在大量复杂的数据条件下，想要查询更深的关系，必须要使用更多的join操作，而大量的
 join操作严重影响关系型数据库的性能。<br>
 
@@ -50,7 +50,7 @@ join操作严重影响关系型数据库的性能。<br>
 ## 三.Neo4j的下载安装
 下载地址：<br>
 https://neo4j.com/download/community-edition/ <br>
-![image](https://github.com/Sevenkili/raphdatabase/raw/master/image/7.png)<br>
+![image](https://github.com/Sevenkili/graphdatabase/raw/master/image/7.png)<br>
 个人通常使用社区版，安装Neo4j前必须要安装java虚拟机，Neo4j安装有两种方式：<br>
 - 压缩版安装（.tar,.zip）
 - 安装版安装（dmg,exe）推荐
