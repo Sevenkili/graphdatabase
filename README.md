@@ -15,6 +15,7 @@
 ## 一.什么是图数据库
   - 关键词：存储图结构数据，NoSQL<br>
   - Neo4j的基本要素(构造单元)：结点，关系，属性<br>
+![image](/Users/qichenglin/Pictures/1.png)
 <img src="/Users/qichenglin/Pictures/1.png"></img>
 <img src="/Users/qichenglin/Pictures/2.png"></img>
 
